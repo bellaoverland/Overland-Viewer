@@ -1,55 +1,33 @@
 # Overland Viewer
 
-A new, light Second Life® viewer for Windows, made with the Godot engine — by **Bella Overland software**.
+A viewer for Second Life, built on the Godot engine (Direct3D 12 or Vulkan), made to stay smooth and steady in crowded places.
 
-Overland Viewer is built to be simple for new residents and kind to modest computers: the menus you know from Firestorm, without the hundreds of buttons, and an engine that keeps crowded places moving.
+> **This software is not provided or supported by Linden Lab, the makers of Second Life.**
 
-**[⬇ Download the latest version](../../releases/latest)** — `OverlandViewer-0.1.0-beta-Setup.exe`
+## Download
+The newest version is always here: **[Releases → Latest](https://github.com/bellaoverland/Overland-Viewer/releases/latest)** (`OverlandViewer-…-Setup.exe`, Windows).
 
-> Beta: this is the first public version. Please report what goes wrong (see *Reporting a problem* below).
+## Support
+Questions and problems: **[Issues](https://github.com/bellaoverland/Overland-Viewer/issues)**. Overland is made by one person in their free time; there is no paid support. To report a problem, attach `login_log.txt` (see Privacy below for what it contains).
 
-## What it does
+## How it differs from Linden Lab's viewer
+- Built on Godot, not on Linden Lab's viewer code.
+- A "dispatcher" lightens the picture by itself when the computer is in trouble (crowds, a full graphics card) and brings it back when things calm down.
+- Far avatars may be drawn as soft smoke until they are loaded, or when many people are around.
+- **Not there yet**: voice chat, mesh upload, some build tools, particles, the older bump / shine maps, media on objects.
 
-- **Log in** to Second Life (with 2FA), *Remember me* and automatic login.
-- **Walk, run, fly, sit, stand**; Firestorm-style AO from your `#Firestorm/#AO` sets.
-- **Avatars**: mesh bodies, clothes, Bakes on Mesh, shapes and animations. While someone loads, a column of **boiling plasma** stands in their place — orange for women, blue for men — and burns away as the person appears.
-- **World**: objects, mesh, **PBR materials** (with their own repeats), textures, animated textures, glow, object lights, water with waves, particles (torch flames, smoke, sparkles).
-- **Sky**: Classic, Clear day, Sunrise, Sunset, Night.
-- **Chat**, private IMs and **group chats** in their own windows; profiles; people nearby; offers (items, friendship, teleport, groups).
-- **My groups**: see your groups, which one is active, make another active or none.
-- **Places** and the **Favorites bar** — drag a landmark onto it.
-- **Clothes** (everything you can wear, by store) and **Outfits** (Wear / Add).
-- **📷 Photo**: one click, saved in your Pictures folder.
-- **L$ balance** in the top bar; Marketplace and Buy L$ from the Avatar menu.
-- **Build**: cube / cylinder / sphere where you look, move and stretch, Take, Delete.
-- **Help** button with a short guide; **Stats** (Ctrl+Shift+1) shows where the time goes.
-
-## Requirements
-
-- Windows 10 or 11, 64-bit
-- A graphics card with Direct3D 12 or Vulkan
-- 8 GB of memory (16 GB for crowded clubs)
-
-## Installing
-
-1. Download `OverlandViewer-0.1.0-beta-Setup.exe` from [Releases](../../releases/latest).
-2. Run it. Windows may show *“Windows protected your PC”* because the installer is new and not yet signed: click **More info → Run anyway**.
-3. Start **Overland Viewer** from the Start menu and log in with your Second Life name and password.
-
-## Known limits (beta)
-
-- Very crowded places (30+ people) are still slow on modest graphics cards; only the nearest avatars are drawn in full (Settings → Avatars).
-- No voice, no neighbouring regions yet.
-- Particles are shown for objects, not for things avatars wear.
-
-## Reporting a problem
-
-The viewer writes a log to `Documents\OverlandViewer\login_log.txt`. In Stats (Ctrl+Shift+1), **Write to log** adds a snapshot of the moment. Send the log, with a few words about what happened, to Bella Overland in Second Life or join the **Inventory Companion** group in-world.
+## Content
+Overland shows Second Life as it is; it adds no content of its own beyond General maturity. What you see depends on the regions you visit and your own Second Life maturity settings.
 
 ## Privacy
+Everything Overland keeps stays on your computer; your password goes only to Linden Lab. Details: **[PRIVACY.md](PRIVACY.md)**.
 
-Your password is only saved if you tick *Remember me*, and then encrypted by Windows for your user account on this computer. Overland Viewer talks to Second Life's own servers (login, the world, the map) and reads its start-screen picture and contributors list from Bella Overland's GitHub. Nothing about you is sent anywhere else.
+## Terms
+Using Second Life means accepting Linden Lab's [Terms of Service](https://lindenlab.com/legal/second-life-terms-and-conditions). When they change, Overland shows them at login and asks for your agreement, as Linden Lab's viewer does.
 
----
+## Uninstall
+Windows Settings → Apps → Overland Viewer → Uninstall. Your settings, caches and logs are in `%APPDATA%\Godot\app_userdata\Overland Viewer Prototype`; delete that folder to remove them too.
 
-Overland Viewer is an independent third-party viewer. It is not made, endorsed or supported by Linden Lab. Second Life® is a trademark of Linden Research, Inc.
+## Built with
+[Godot Engine](https://godotengine.org) (MIT licence) · [LibreMetaverse](https://github.com/cinderblocks/libremetaverse) (BSD licence) · CoreJ2K (BSD licence).
+
